@@ -1,0 +1,48 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+.catchcopy{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  top: -360px;
+  left: 250px;
+  font-size: 60px;
+}
+
+.heloimage{
+  width: 100%;
+  height: 750px;
+  opacity: 50%;
+}
+
+
+
+
+.place_imgs{
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  .main_img{
+    height: 80%;
+    margin-top: 50px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .sub_imgs{
+    height: 80%;
+    margin-top: 50px;
+    .img{
+      padding: 3px;
+    }
+
+  }
+}
+
