@@ -4,7 +4,13 @@
 
 $(function(){
   
-  
+  var $switchMain = $('.imgbox_main');
+  var $switchSub = $('.img');
+
+  $switchSub.on('click', function(){
+    
+    $switchMain.attr('src', $(this).attr('src'));
+  });
 })
 
 
