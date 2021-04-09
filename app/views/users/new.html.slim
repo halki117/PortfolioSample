@@ -1,0 +1,20 @@
+.row 
+  .col-4.mx-auto
+    .card.form_users_new
+      .card-body
+        h2 新規登録
+        = form_with model: @user, local: true do |f|
+          .form-group
+            = f.label :name, class: "bmd-label-floating"
+            = f.text_field :name, class: "form-control"
+          .form-group
+            = f.label :email, class: "bmd-label-floating"
+            = f.text_field :email, class: "form-control"
+          .form-group
+            = f.label :password, class: "bmd-label-floating"
+            = f.password_field :password, class: "form-control"
+          .form-group
+            = f.label :password_confirmation, class: "bmd-label-floating"
+            = f.password_field :password_confirmation, class: "form-control"
+          = f.submit "送信", class: "btn btn-success btn-raised"
+        

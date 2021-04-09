@@ -1,7 +1,11 @@
+- if flash
+  - flash.each do |key, value|
+    = content_tag :div, value, class: key
+  
+
 .row.helospace
   .helobaner.m-auto
     .image
       = image_tag "hawaiiGOPR0100.jpeg", class: "heloimage"
     .catchcopy
       | Good Discovery!! 
-      
