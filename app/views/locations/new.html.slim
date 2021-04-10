@@ -1,0 +1,21 @@
+h1 ロケーション登録
+
+.row 
+  .col-4.mx-auto
+    .card.form_location_new
+      .card-body
+        h2 新規登録
+        = form_with model: @location, local: true do |f|
+          .form-group
+            = f.label :address, class: "bmd-label-floating"
+            = f.text_field :address, class: "form-control"
+          .form-group
+            = f.label :images, class: "bmd-label-floating"
+            = f.file_field :images, multiple: true, class: "form-control"
+          .form-group
+            = f.label :description, class: "bmd-label-floating"
+            = f.text_area :description, class: "form-control"
+            = f.hidden_field :latitude, value: 1.1
+            = f.hidden_field :longitude, value: 1.1
+          = f.submit "送信", class: "btn btn-success btn-raised"
+            - binding.pry
