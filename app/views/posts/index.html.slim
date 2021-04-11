@@ -9,3 +9,18 @@
       = image_tag "hawaiiGOPR0100.jpeg", class: "heloimage"
     .catchcopy
       | Good Discovery!! 
+
+
+.row 
+  .col-4.d-flex
+    - @locations.each do |location|
+      .location_image.m-2 id="map-#{location.id}" 
+        = image_tag location.images[0].url, size: "200x200"
+        = location.address
+br
+br
+
+div id = 'map_index' # idを付与, この部分にjsファイルで記述したGoogle Mapが埋め込まれる
+- google_api = "https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_MAP_API'] }&callback=initMap".html_safe
+script{ async src = google_api }
+

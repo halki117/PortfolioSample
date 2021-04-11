@@ -18,6 +18,6 @@ class LocationsController < ApplicationController
   
   private
   def location_params
-    params.require(:location).permit( :address, :description, images: [])
+    params.require(:location).permit( :address, :description, images: [])  # :latitude, :longitude のキーにも値を入れる必要がある
   end
 end

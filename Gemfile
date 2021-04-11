@@ -64,3 +64,6 @@ gem 'sorcery'
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'dotenv-rails' # APIキーを環境変数化
+gem 'gon' # コントローラーで定義したインスタンス変数をJavaScript内で使用出来るようにする。
+gem 'geocoder' # 住所から緯度経度を算出する。
