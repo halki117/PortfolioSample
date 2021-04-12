@@ -15,20 +15,20 @@
   h2.mx-auto 新着スポット
   .col-12.d-flex
     - @locations.each do |location|
-      = link_to 
-      .card.m-auto id="map-#{location.id}"
-        .card-header
-          = image_tag location.images[0].url, size: "300x250"
-        .card-body
-          = location.address
-        .card-footer
-          .likes
-            = icon 'fa', 'heart', + "x20"
-          .badges.d-flex
-            .badge.badge-info.m-1
-              | #かわいい
-            .badge.badge-info.m-1
-              | #情熱的
+      = link_to location_path(location) do
+        .card.mx-3 id="map-#{location.id}"
+          .card-header
+            = image_tag location.images[0].url, size: "300x250"
+          .card-body
+            = location.address
+          .card-footer
+            .likes
+              = icon 'fa', 'heart', + "x20"
+            .badges.d-flex
+              .badge.badge-info.m-1
+                | #かわいい
+              .badge.badge-info.m-1
+                | #情熱的
 
           
 br

@@ -1,0 +1,21 @@
+.container.place_detail
+  .row.place_imgs 
+    .col-7.main_img
+      = image_tag @location.images[0].url, class: "imgbox_main img-fluid"
+    .col-4.sub_imgs
+      .sub_img1
+        = image_tag @location.images[0].url, class: "img img-fluid"
+      - if @location.images[1]
+        .sub_img2
+          = image_tag @location.images[1].url, class: "img img-fluid"
+      - else 
+         .sub_img2
+          = image_tag "http://design-ec.com/d/e_others_50/l_e_others_500.png", class: "img img-fluid"
+      - if @location.images[2]
+        .sub_img3
+          = image_tag @location.images[2].url, class: "img img-fluid"
+      - else 
+         .sub_img3
+          = image_tag "http://design-ec.com/d/e_others_50/l_e_others_500.png", class: "img img-fluid"  
+  .row
+    .col-12.place_description

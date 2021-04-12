@@ -6,10 +6,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'  
   post 'logout' => 'sessions#destroy', as: :logout
   
-  
-  get 'posts/index'
-  get 'posts/show' => 'posts#show'
-  root 'posts#index'
+
+  root 'locations#index'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
